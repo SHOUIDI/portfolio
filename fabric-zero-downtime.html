@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Case Study — Zero-Downtime Migration to Microsoft Fabric</title>
+    <meta name="description" content="Case study: Zero-Downtime migration to Microsoft Fabric using OneLake Shortcuts, MLV, incremental Gold, and reconciliation." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config={darkMode:"class"}</script>
+  </head>
+
+  <body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100">
+    <header class="sticky top-0 z-40 bg-white/70 dark:bg-slate-800/70 backdrop-blur border-b border-slate-200/60 dark:border-slate-700/60">
+      <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+        <a href="index.html" class="font-semibold tracking-tight">← Back</a>
+        <button id="themeToggle2" class="rounded-full border px-3 py-1 text-xs hover:bg-slate-100 dark:hover:bg-slate-800">🌙/☀️</button>
+      </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 py-10">
+      <p class="text-xs text-slate-500 dark:text-slate-400">Case Study • Retail • Platform Migration</p>
+
+      <h1 class="mt-2 text-3xl md:text-4xl font-bold leading-tight">
+        Zero-Downtime Migration to <span class="text-blue-600">Microsoft Fabric</span>
+      </h1>
+
+      <p class="mt-4 text-slate-600 dark:text-slate-300">
+        Replaced an 8-month “big bang” plan with a <strong>coexistence-active hybrid lakehouse</strong> to deliver Fabric value in weeks,
+        with <strong>finance-grade reconciliation</strong> and <strong>idempotent pipelines</strong>.
+      </p>
+
+      <div class="mt-6 grid sm:grid-cols-4 gap-3 text-sm">
+        <div class="rounded-xl border p-4 bg-white/60 dark:bg-slate-800/60"><p class="text-xs text-slate-500 dark:text-slate-400">Time-to-value</p><p class="mt-1 font-semibold">3 weeks</p></div>
+        <div class="rounded-xl border p-4 bg-white/60 dark:bg-slate-800/60"><p class="text-xs text-slate-500 dark:text-slate-400">Downtime</p><p class="mt-1 font-semibold">0 minutes</p></div>
+        <div class="rounded-xl border p-4 bg-white/60 dark:bg-slate-800/60"><p class="text-xs text-slate-500 dark:text-slate-400">Power BI</p><p class="mt-1 font-semibold">-65%</p></div>
+        <div class="rounded-xl border p-4 bg-white/60 dark:bg-slate-800/60"><p class="text-xs text-slate-500 dark:text-slate-400">Cost</p><p class="mt-1 font-semibold">~35–40%</p></div>
+      </div>
+
+      <section class="mt-10">
+        <h2 class="text-2xl font-semibold">Architecture</h2>
+        <p class="mt-2 text-slate-600 dark:text-slate-300">
+          Legacy → <strong>Shortcuts (Bronze)</strong> → <strong>MLV (Silver)</strong> → <strong>Incremental Gold</strong> → <strong>Direct Lake Power BI</strong>
+        </p>
+
+        <figure class="mt-5 rounded-2xl border bg-white/60 dark:bg-slate-800/60 p-4">
+          <img
+            src="./fabric_architecture.png"
+            onerror="this.onerror=null;this.src='https://placehold.co/1200x420/png?text=Upload+fabric_architecture.png';"
+            alt="Hybrid architecture diagram"
+            class="w-full rounded-xl"
+          />
+          <figcaption class="mt-2 text-xs text-slate-500 dark:text-slate-400">
+            Upload <code>fabric_architecture.png</code> in the same folder as this file.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="mt-10">
+        <h2 class="text-2xl font-semibold">Reliability guardrails</h2>
+        <div class="mt-4 grid sm:grid-cols-2 gap-3 text-sm">
+          <div class="rounded-2xl border p-6 bg-white/60 dark:bg-slate-800/60">
+            <p class="font-medium">Idempotence</p>
+            <p class="mt-2 text-slate-600 dark:text-slate-300">
+              Safe re-runs using batch IDs, merge logic, and watermarks (no duplicates).
+            </p>
+          </div>
+          <div class="rounded-2xl border p-6 bg-white/60 dark:bg-slate-800/60">
+            <p class="font-medium">Reconciliation circuit breaker</p>
+            <p class="mt-2 text-slate-600 dark:text-slate-300">
+              Automated checks compare legacy vs Fabric; publishing is blocked if revenue diverges beyond a strict threshold.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-10">
+        <h2 class="text-2xl font-semibold">ROI</h2>
+        <div class="mt-4 rounded-2xl border p-6 bg-white/60 dark:bg-slate-800/60">
+          <ul class="grid sm:grid-cols-2 gap-3 text-sm">
+            <li>⏱ First dashboard in <strong>3 weeks</strong> (vs <strong>8 months</strong>)</li>
+            <li>✅ <strong>0 downtime</strong> during cutover</li>
+            <li>⚡ <strong>-65%</strong> Power BI load time</li>
+            <li>💰 <strong>~35–40%</strong> cost reduction</li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="mt-12 text-center">
+        <a href="index.html#projects" class="text-sm underline hover:text-blue-600">Back to projects ↑</a>
+      </div>
+    </main>
+
+    <footer class="py-8 text-center text-xs text-slate-500">
+      © <span id="year2"></span> Salma Houidi.
+    </footer>
+
+    <script>
+      const btn2 = document.getElementById("themeToggle2");
+      const preferDark =
+        localStorage.getItem("theme") === "dark" ||
+        (!localStorage.getItem("theme") && window.matchMedia("(prefers-color-scheme: dark)").matches);
+
+      if (preferDark) document.documentElement.classList.add("dark");
+
+      btn2?.addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
+        localStorage.setItem("theme", document.documentElement.classList.contains("dark") ? "dark" : "light");
+      });
+
+      document.getElementById("year2").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
+
