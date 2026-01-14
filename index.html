@@ -1,67 +1,31 @@
-<!--
-FILES YOU SHOULD CREATE IN YOUR REPO ROOT (same folder):
-1) index.html
-2) fabric-zero-downtime.html
-3) profile.jpg   (optional, your real photo)
-
-If you publish as a PROJECT site (https://username.github.io/repo/),
-this code will still work because it uses RELATIVE links.
--->
-
-<!-- =========================
-     1) index.html
-========================= -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Salma Houidi — Data Engineer Portfolio</title>
-    <meta
-      name="description"
-      content="Salma Houidi — Data Engineer. Microsoft Fabric, Azure, Databricks, Power BI, CI/CD, SQL, PySpark."
-    />
+    <meta name="description" content="Salma Houidi — Data Engineer. Microsoft Fabric, Azure, Databricks, Power BI, CI/CD, SQL, PySpark." />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = { darkMode: "class" };
-    </script>
+    <script>tailwind.config={darkMode:"class"}</script>
   </head>
 
   <body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100">
-    <!-- Header -->
-    <header
-      class="fixed top-0 inset-x-0 z-50 bg-white/70 dark:bg-slate-800/70 backdrop-blur border-b border-slate-200/60 dark:border-slate-700/60"
-    >
+    <header class="fixed top-0 inset-x-0 z-50 bg-white/70 dark:bg-slate-800/70 backdrop-blur border-b border-slate-200/60 dark:border-slate-700/60">
       <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
         <a href="#top" class="font-semibold tracking-tight">Salma Houidi</a>
-
         <nav class="hidden sm:flex gap-4 text-sm">
           <a class="hover:text-blue-600" href="#about">About</a>
           <a class="hover:text-blue-600" href="#projects">Projects</a>
           <a class="hover:text-blue-600" href="#contact">Contact</a>
         </nav>
-
         <div class="flex items-center gap-2">
-          <button
-            id="themeToggle"
-            class="rounded-full border px-3 py-1 text-xs hover:bg-slate-100 dark:hover:bg-slate-800"
-            aria-label="Toggle theme"
-            title="Toggle theme"
-          >
-            🌙/☀️
-          </button>
-          <a
-            href="#contact"
-            class="hidden sm:inline-flex items-center gap-2 rounded-full bg-blue-600 text-white text-xs font-medium px-3 py-1.5 hover:bg-blue-700"
-          >
-            Contact
-          </a>
+          <button id="themeToggle" class="rounded-full border px-3 py-1 text-xs hover:bg-slate-100 dark:hover:bg-slate-800">🌙/☀️</button>
+          <a href="#contact" class="hidden sm:inline-flex items-center gap-2 rounded-full bg-blue-600 text-white text-xs font-medium px-3 py-1.5 hover:bg-blue-700">Contact</a>
         </div>
       </div>
     </header>
 
     <main id="top" class="max-w-5xl mx-auto px-4 pt-28 pb-24">
-      <!-- Hero -->
       <section class="grid md:grid-cols-[1.2fr,1fr] gap-8 items-center">
         <div>
           <h1 class="text-3xl md:text-4xl font-bold leading-tight">
@@ -83,222 +47,85 @@ this code will still work because it uses RELATIVE links.
             <span class="px-2 py-1 text-xs rounded-full border">CI/CD</span>
             <span class="px-2 py-1 text-xs rounded-full border">SQL</span>
             <span class="px-2 py-1 text-xs rounded-full border">PySpark</span>
-            <span class="px-2 py-1 text-xs rounded-full border">Data Quality</span>
           </div>
 
           <div class="mt-6 flex flex-wrap gap-3">
-            <a
-              href="#p1"
-              class="inline-flex items-center justify-center rounded-full bg-blue-600 text-white text-xs font-medium px-4 py-2 hover:bg-blue-700"
-            >
+            <a href="#p1" class="inline-flex items-center justify-center rounded-full bg-blue-600 text-white text-xs font-medium px-4 py-2 hover:bg-blue-700">
               View flagship →
             </a>
-            <a
-              href="fabric-zero-downtime.html"
-              class="inline-flex items-center justify-center rounded-full border text-xs font-medium px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800"
-            >
+            <a href="fabric-zero-downtime.html" class="inline-flex items-center justify-center rounded-full border text-xs font-medium px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800">
               Read case study →
             </a>
           </div>
-
-          <p class="mt-3 text-xs text-slate-500 dark:text-slate-400">
-            Tip: publish via GitHub Pages (main / root). Use relative links to avoid 404s.
-          </p>
         </div>
 
         <div class="relative">
-          <!-- Put profile.jpg in repo root. If missing, show placeholder. -->
-          <img
-            alt="Photo of Salma Houidi"
-            src="./profile.jpg"
-            onerror="this.onerror=null;this.src='https://placehold.co/320x320/png?text=Salma+Houidi';"
-            class="w-40 h-40 md:w-48 md:h-48 rounded-2xl object-cover mx-auto ring-4 ring-blue-100 dark:ring-blue-900"
-          />
-          <div class="mt-4 flex justify-center gap-2 text-xs">
-            <a
-              class="rounded-full border px-3 py-1 hover:bg-slate-50 dark:hover:bg-slate-800"
-              href="https://www.linkedin.com/in/houidi-salma/"
-              target="_blank"
-              rel="noreferrer"
-              >LinkedIn</a
-            >
-            <a
-              class="rounded-full border px-3 py-1 hover:bg-slate-50 dark:hover:bg-slate-800"
-              href="https://github.com/salmahouidi"
-              target="_blank"
-              rel="noreferrer"
-              >GitHub</a
-            >
-            <a
-              class="rounded-full border px-3 py-1 hover:bg-slate-50 dark:hover:bg-slate-800"
-              href="mailto:salma.houidi.ing@gmail.com"
-              >Email</a
-            >
-          </div>
+          <img alt="Photo of Salma Houidi"
+               src="./profile.jpg"
+               onerror="this.onerror=null;this.src='https://placehold.co/320x320/png?text=Salma+Houidi';"
+               class="w-40 h-40 md:w-48 md:h-48 rounded-2xl object-cover mx-auto ring-4 ring-blue-100 dark:ring-blue-900" />
         </div>
       </section>
 
-      <!-- About -->
       <section id="about" class="mt-16">
         <h2 class="text-2xl font-semibold">About</h2>
         <div class="prose prose-slate dark:prose-invert max-w-none mt-3">
           <p>
-            I’m <strong>Salma Houidi</strong>, a Data Engineer focused on <strong>production-grade</strong> data systems:
-            observable pipelines, reliable data quality, incremental processing, and business-ready semantic layers.
-          </p>
-          <p>
-            I’ve worked across Azure ecosystems (Databricks/Synapse/Fabric) and build platforms that teams can trust—especially when
-            the business needs change fast and downtime is not allowed.
+            I’m <strong>Salma Houidi</strong>, a Data Engineer focused on production-grade systems: observable pipelines,
+            data quality, incremental processing, and business-ready semantic layers.
           </p>
         </div>
       </section>
 
-      <!-- Quick Navigation -->
-      <section class="mt-12">
-        <h3 class="text-lg font-semibold">Quick Navigation</h3>
-        <ul class="mt-3 grid sm:grid-cols-2 md:grid-cols-3 gap-2 text-sm">
-          <li>
-            <a class="block rounded-lg border p-3 hover:border-blue-600" href="#p1"
-              >🏆 Zero-Downtime Migration (Synapse/Databricks → Fabric)</a
-            >
-          </li>
-          <li><a class="block rounded-lg border p-3 hover:border-blue-600" href="#p2">🧱 Scalable PySpark ETL</a></li>
-          <li><a class="block rounded-lg border p-3 hover:border-blue-600" href="#p3">📊 Power BI Dashboards</a></li>
-        </ul>
-      </section>
-
-      <!-- Projects -->
       <section id="projects" class="mt-12">
-        <div class="flex items-end justify-between gap-4">
-          <h2 class="text-2xl font-semibold">Projects</h2>
-          <p class="text-sm text-slate-500 dark:text-slate-400">Flagship first. Depth in the case study page.</p>
-        </div>
+        <h2 class="text-2xl font-semibold">Projects</h2>
 
-        <!-- Project 1 (Flagship) -->
-        <article
-          id="p1"
-          class="mt-6 rounded-2xl border p-6 bg-white/60 dark:bg-slate-800/60 ring-1 ring-blue-500/30"
-        >
+        <article id="p1" class="mt-6 rounded-2xl border p-6 bg-white/60 dark:bg-slate-800/60 ring-1 ring-blue-500/30">
           <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
             <div>
               <p class="inline-flex items-center gap-2 text-xs font-medium px-3 py-1 rounded-full bg-blue-600 text-white">
-                Featured • Flagship System
+                Featured • Flagship
               </p>
-
               <h3 class="mt-3 text-xl font-semibold">🏆 Zero-Downtime Migration to Microsoft Fabric</h3>
-
               <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
-                Designed a <strong>coexistence-active</strong> migration from Synapse/Databricks to Fabric for mission-critical retail
-                reporting. Implemented <strong>Zero-Copy Bronze via OneLake Shortcuts</strong>, <strong>MLV-based Silver</strong>, and
-                <strong>incremental Gold modeling</strong> optimized for <strong>Power BI Direct Lake</strong>.
+                Hybrid lakehouse using <strong>OneLake Shortcuts (Zero-Copy Bronze)</strong> + <strong>MLV (Silver)</strong> +
+                <strong>Incremental Gold</strong> + <strong>Direct Lake Power BI</strong>, with reconciliation + idempotence guardrails.
               </p>
             </div>
-
             <div class="flex flex-wrap gap-2">
-              <a
-                href="fabric-zero-downtime.html"
-                class="inline-flex items-center justify-center rounded-full bg-blue-600 text-white text-xs font-medium px-3 py-1.5 hover:bg-blue-700"
-              >
+              <a href="fabric-zero-downtime.html" class="inline-flex items-center justify-center rounded-full bg-blue-600 text-white text-xs font-medium px-3 py-1.5 hover:bg-blue-700">
                 Read case study →
               </a>
-              <a
-                href="#contact"
-                class="inline-flex items-center justify-center rounded-full border text-xs font-medium px-3 py-1.5 hover:bg-slate-50 dark:hover:bg-slate-800"
-              >
-                Contact
-              </a>
-            </div>
-          </div>
-
-          <ul class="mt-3 flex flex-wrap gap-2 text-xs">
-            <li class="px-2 py-1 rounded-full border">Microsoft Fabric</li>
-            <li class="px-2 py-1 rounded-full border">OneLake Shortcuts</li>
-            <li class="px-2 py-1 rounded-full border">MLV</li>
-            <li class="px-2 py-1 rounded-full border">Medallion</li>
-            <li class="px-2 py-1 rounded-full border">Incremental Notebooks</li>
-            <li class="px-2 py-1 rounded-full border">Direct Lake</li>
-            <li class="px-2 py-1 rounded-full border">Reconciliation</li>
-            <li class="px-2 py-1 rounded-full border">Idempotence</li>
-          </ul>
-
-          <div class="mt-4 grid sm:grid-cols-2 gap-3 text-sm">
-            <div class="rounded-xl border p-4 bg-white/50 dark:bg-slate-900/20">
-              <p class="font-medium">Key move</p>
-              <p class="mt-1 text-slate-600 dark:text-slate-300">
-                Replaced an 8-month “big bang” plan with <strong>hybrid coexistence</strong> to minimize risk and deliver value fast.
-              </p>
-            </div>
-            <div class="rounded-xl border p-4 bg-white/50 dark:bg-slate-900/20">
-              <p class="font-medium">CTO guardrails</p>
-              <p class="mt-1 text-slate-600 dark:text-slate-300">
-                Added <strong>finance-grade reconciliation</strong> + <strong>idempotent incremental loads</strong> to prevent silent drift.
-              </p>
             </div>
           </div>
 
           <p class="mt-4 text-sm">
-            <strong>Impact:</strong> first production dashboard in <strong>3 weeks</strong> (vs <strong>8 months</strong>),
-            <strong>0 downtime</strong>, <strong>-65%</strong> Power BI load time, <strong>~35–40%</strong> cost reduction.
+            <strong>Impact:</strong> first dashboard in <strong>3 weeks</strong>, <strong>0 downtime</strong>, <strong>-65%</strong> Power BI load time,
+            <strong>~35–40%</strong> cost reduction.
           </p>
         </article>
 
-        <!-- Project 2 -->
-        <article id="p2" class="mt-6 rounded-2xl border p-6 bg-white/60 dark:bg-slate-800/60">
+        <article class="mt-6 rounded-2xl border p-6 bg-white/60 dark:bg-slate-800/60">
           <h3 class="text-xl font-semibold">🧱 Scalable PySpark ETL</h3>
           <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
-            Built an optimized PySpark pipeline for financial data using Delta patterns (partitioning, incremental loads, quality checks)
-            to improve performance and cost efficiency.
+            Built incremental PySpark pipelines with Delta patterns to improve performance and reliability.
           </p>
-          <ul class="mt-3 flex flex-wrap gap-2 text-xs">
-            <li class="px-2 py-1 rounded-full border">PySpark</li>
-            <li class="px-2 py-1 rounded-full border">Delta Lake</li>
-            <li class="px-2 py-1 rounded-full border">Azure Storage</li>
-            <li class="px-2 py-1 rounded-full border">Data Quality</li>
-          </ul>
-          <p class="mt-3 text-sm"><strong>Impact:</strong> reduced processing time by 40% and improved reliability.</p>
         </article>
 
-        <!-- Project 3 -->
-        <article id="p3" class="mt-6 rounded-2xl border p-6 bg-white/60 dark:bg-slate-800/60">
+        <article class="mt-6 rounded-2xl border p-6 bg-white/60 dark:bg-slate-800/60">
           <h3 class="text-xl font-semibold">📊 Power BI Dashboards</h3>
           <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
-            Built KPI dashboards connected to Databricks and Azure SQL with clean semantic models and performance optimization.
+            Built KPI dashboards with semantic modeling and performance optimization.
           </p>
-          <ul class="mt-3 flex flex-wrap gap-2 text-xs">
-            <li class="px-2 py-1 rounded-full border">Power BI</li>
-            <li class="px-2 py-1 rounded-full border">SQL</li>
-            <li class="px-2 py-1 rounded-full border">Azure</li>
-            <li class="px-2 py-1 rounded-full border">Semantic Model</li>
-          </ul>
-          <p class="mt-3 text-sm"><strong>Impact:</strong> enabled self-service analytics and reduced manual reporting by 60%.</p>
         </article>
       </section>
 
-      <!-- Contact -->
       <section id="contact" class="mt-16">
         <h2 class="text-2xl font-semibold">Contact</h2>
-        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Want to discuss a role or a project? Reach out.</p>
-
         <div class="mt-3 flex flex-wrap items-center gap-3 text-sm">
-          <a
-            class="inline-flex items-center gap-2 rounded-md border px-3 py-1.5 hover:bg-slate-50 dark:hover:bg-slate-800"
-            href="https://github.com/salmahouidi"
-            target="_blank"
-            rel="noreferrer"
-            >GitHub</a
-          >
-          <a
-            class="inline-flex items-center gap-2 rounded-md border px-3 py-1.5 hover:bg-slate-50 dark:hover:bg-slate-800"
-            href="https://www.linkedin.com/in/houidi-salma/"
-            target="_blank"
-            rel="noreferrer"
-            >LinkedIn</a
-          >
-          <a
-            class="inline-flex items-center gap-2 rounded-md border px-3 py-1.5 hover:bg-slate-50 dark:hover:bg-slate-800"
-            href="mailto:salma.houidi.ing@gmail.com"
-            >Email</a
-          >
+          <a class="inline-flex items-center gap-2 rounded-md border px-3 py-1.5 hover:bg-slate-50 dark:hover:bg-slate-800" href="https://github.com/salmahouidi" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="inline-flex items-center gap-2 rounded-md border px-3 py-1.5 hover:bg-slate-50 dark:hover:bg-slate-800" href="https://www.linkedin.com/in/houidi-salma/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="inline-flex items-center gap-2 rounded-md border px-3 py-1.5 hover:bg-slate-50 dark:hover:bg-slate-800" href="mailto:salma.houidi.ing@gmail.com">Email</a>
         </div>
       </section>
 
@@ -308,15 +135,15 @@ this code will still work because it uses RELATIVE links.
     </main>
 
     <footer class="py-8 text-center text-xs text-slate-500">
-      © <span id="year"></span> Salma Houidi — Data Engineer.
+      © <span id="year"></span> Salma Houidi.
     </footer>
 
     <script>
-      // Theme
       const btn = document.getElementById("themeToggle");
       const preferDark =
         localStorage.getItem("theme") === "dark" ||
-        (!localStorage.getItem("theme") && window.matchMedia("(prefers-color-scheme: dark)").matches);
+        (!localStorage.getItem("theme") &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches);
 
       if (preferDark) document.documentElement.classList.add("dark");
 
@@ -325,305 +152,7 @@ this code will still work because it uses RELATIVE links.
         localStorage.setItem("theme", document.documentElement.classList.contains("dark") ? "dark" : "light");
       });
 
-      // Year
       document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-  </body>
-</html>
-
-<!-- =========================
-     2) fabric-zero-downtime.html
-========================= -->
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Case Study — Zero-Downtime Migration to Microsoft Fabric</title>
-    <meta
-      name="description"
-      content="Case study: Zero-Downtime migration from Synapse/Databricks to Microsoft Fabric using OneLake Shortcuts, MLV, incremental Gold, and finance-grade reconciliation."
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = { darkMode: "class" };
-    </script>
-  </head>
-
-  <body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100">
-    <!-- Top bar -->
-    <header class="sticky top-0 z-40 bg-white/70 dark:bg-slate-800/70 backdrop-blur border-b border-slate-200/60 dark:border-slate-700/60">
-      <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
-        <a href="index.html" class="font-semibold tracking-tight">← Back</a>
-
-        <div class="flex items-center gap-2">
-          <button
-            id="themeToggle2"
-            class="rounded-full border px-3 py-1 text-xs hover:bg-slate-100 dark:hover:bg-slate-800"
-            aria-label="Toggle theme"
-            title="Toggle theme"
-          >
-            🌙/☀️
-          </button>
-          <a
-            href="mailto:salma.houidi.ing@gmail.com"
-            class="inline-flex items-center gap-2 rounded-full bg-blue-600 text-white text-xs font-medium px-3 py-1.5 hover:bg-blue-700"
-          >
-            Email
-          </a>
-        </div>
-      </div>
-    </header>
-
-    <main class="max-w-4xl mx-auto px-4 py-10">
-      <!-- Title -->
-      <section>
-        <p class="text-xs text-slate-500 dark:text-slate-400">Case Study • Retail Enterprise • Platform Migration</p>
-        <h1 class="mt-2 text-3xl md:text-4xl font-bold leading-tight">
-          Zero-Downtime Migration from Synapse/Databricks to <span class="text-blue-600">Microsoft Fabric</span>
-        </h1>
-
-        <p class="mt-4 text-slate-600 dark:text-slate-300">
-          I replaced a risky “big bang” plan with a <strong>coexistence-active</strong> hybrid architecture that delivered Fabric value
-          in weeks—without interrupting mission-critical reporting.
-        </p>
-
-        <!-- Impact strip -->
-        <div class="mt-6 grid sm:grid-cols-4 gap-3 text-sm">
-          <div class="rounded-xl border p-4 bg-white/60 dark:bg-slate-800/60">
-            <p class="text-xs text-slate-500 dark:text-slate-400">Time-to-value</p>
-            <p class="mt-1 font-semibold">3 weeks</p>
-          </div>
-          <div class="rounded-xl border p-4 bg-white/60 dark:bg-slate-800/60">
-            <p class="text-xs text-slate-500 dark:text-slate-400">Downtime</p>
-            <p class="mt-1 font-semibold">0 minutes</p>
-          </div>
-          <div class="rounded-xl border p-4 bg-white/60 dark:bg-slate-800/60">
-            <p class="text-xs text-slate-500 dark:text-slate-400">Power BI speed</p>
-            <p class="mt-1 font-semibold">-65%</p>
-          </div>
-          <div class="rounded-xl border p-4 bg-white/60 dark:bg-slate-800/60">
-            <p class="text-xs text-slate-500 dark:text-slate-400">Cost impact</p>
-            <p class="mt-1 font-semibold">~35–40%</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- System at a glance -->
-      <section class="mt-10">
-        <div class="rounded-2xl border p-6 bg-white/60 dark:bg-slate-800/60">
-          <h2 class="text-xl font-semibold">System at a glance</h2>
-          <ul class="mt-3 grid sm:grid-cols-2 gap-2 text-sm text-slate-700 dark:text-slate-200">
-            <li><strong>Domain:</strong> Retail sales & inventory reporting</li>
-            <li><strong>Scale:</strong> ~15 TB active, 100M+ rows/day</li>
-            <li><strong>Source:</strong> Synapse / Databricks (legacy)</li>
-            <li><strong>Bridge:</strong> OneLake Shortcuts (Zero-Copy Bronze)</li>
-            <li><strong>Normalize:</strong> MLV (Silver)</li>
-            <li><strong>Serve:</strong> Incremental Gold + Power BI Direct Lake</li>
-            <li><strong>Reliability:</strong> Idempotence + schema validation</li>
-            <li><strong>Trust:</strong> Finance-grade reconciliation “circuit breaker”</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Architecture -->
-      <section class="mt-10">
-        <h2 class="text-2xl font-semibold">Architecture</h2>
-        <p class="mt-2 text-slate-600 dark:text-slate-300">
-          The key design principle was <strong>speed over purity</strong>: avoid heavy ingestion early, deliver trusted dashboards fast,
-          then progressively modernize.
-        </p>
-
-        <!-- Diagram (replace src with your diagram file) -->
-        <figure class="mt-5 rounded-2xl border bg-white/60 dark:bg-slate-800/60 p-4">
-          <img
-            src="./fabric_architecture.png"
-            onerror="this.onerror=null;this.src='https://placehold.co/1200x420/png?text=Upload+fabric_architecture.png';"
-            alt="Hybrid lakehouse architecture diagram"
-            class="w-full rounded-xl"
-          />
-          <figcaption class="mt-2 text-xs text-slate-500 dark:text-slate-400">
-            Hybrid Lakehouse: Legacy → Shortcuts (Bronze) → MLV (Silver) → Incremental Gold → Direct Lake Power BI
-          </figcaption>
-        </figure>
-
-        <div class="mt-6 grid sm:grid-cols-2 gap-3 text-sm">
-          <div class="rounded-xl border p-4 bg-white/60 dark:bg-slate-800/60">
-            <p class="font-medium">Decision #1 — Zero-Copy Bronze</p>
-            <p class="mt-1 text-slate-600 dark:text-slate-300">
-              I avoided full ingestion to eliminate months of ETL work and reduce data movement costs, accepting temporary dependency on
-              legacy systems.
-            </p>
-          </div>
-          <div class="rounded-xl border p-4 bg-white/60 dark:bg-slate-800/60">
-            <p class="font-medium">Decision #2 — Materialize Gold only</p>
-            <p class="mt-1 text-slate-600 dark:text-slate-300">
-              Gold was physically optimized in Fabric to guarantee Direct Lake performance while keeping Bronze/Silver lightweight.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Business challenge -->
-      <section class="mt-10">
-        <h2 class="text-2xl font-semibold">Business challenge</h2>
-        <div class="mt-4 grid sm:grid-cols-2 gap-3 text-sm">
-          <div class="rounded-2xl border p-6 bg-white/60 dark:bg-slate-800/60">
-            <p class="font-medium">The constraint</p>
-            <p class="mt-2 text-slate-600 dark:text-slate-300">
-              Reporting had to remain <strong>24/7</strong>. A margin error of <strong>0.05%</strong> could block financial close.
-              A big-bang migration was too risky.
-            </p>
-          </div>
-          <div class="rounded-2xl border p-6 bg-white/60 dark:bg-slate-800/60">
-            <p class="font-medium">The risk</p>
-            <p class="mt-2 text-slate-600 dark:text-slate-300">
-              The initial lift & shift estimate was ~<strong>8 months</strong> and significant egress/duplication costs, with drift risk
-              across two platforms.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Execution -->
-      <section class="mt-10">
-        <h2 class="text-2xl font-semibold">Execution (roadmap)</h2>
-        <ol class="mt-4 space-y-3 text-sm">
-          <li class="rounded-2xl border p-5 bg-white/60 dark:bg-slate-800/60">
-            <p class="font-medium">1) Audit & governance</p>
-            <p class="mt-1 text-slate-600 dark:text-slate-300">
-              Assessed the legacy platform, documented datasets, and created a data dictionary to align definitions across teams.
-            </p>
-          </li>
-          <li class="rounded-2xl border p-5 bg-white/60 dark:bg-slate-800/60">
-            <p class="font-medium">2) Hybrid foundation</p>
-            <p class="mt-1 text-slate-600 dark:text-slate-300">
-              Configured Fabric Lakehouse + Shortcuts to legacy storage; established security and access patterns for coexistence.
-            </p>
-          </li>
-          <li class="rounded-2xl border p-5 bg-white/60 dark:bg-slate-800/60">
-            <p class="font-medium">3) Standardized build patterns</p>
-            <p class="mt-1 text-slate-600 dark:text-slate-300">
-              Defined production standards for pipelines/notebooks (idempotence, watermarks, logging, repeatable deployments).
-            </p>
-          </li>
-          <li class="rounded-2xl border p-5 bg-white/60 dark:bg-slate-800/60">
-            <p class="font-medium">4) Gold materialization & performance</p>
-            <p class="mt-1 text-slate-600 dark:text-slate-300">
-              Built incremental Gold datasets optimized for Direct Lake: partitioning, file sizing, and refresh strategy.
-            </p>
-          </li>
-          <li class="rounded-2xl border p-5 bg-white/60 dark:bg-slate-800/60">
-            <p class="font-medium">5) Invisible cutover</p>
-            <p class="mt-1 text-slate-600 dark:text-slate-300">
-              Remapped Power BI semantic models to new views so business users saw no disruption—only faster reports.
-            </p>
-          </li>
-        </ol>
-      </section>
-
-      <!-- Reliability -->
-      <section class="mt-10">
-        <h2 class="text-2xl font-semibold">Reliability & risk management</h2>
-        <div class="mt-4 grid sm:grid-cols-2 gap-3 text-sm">
-          <div class="rounded-2xl border p-6 bg-white/60 dark:bg-slate-800/60">
-            <p class="font-medium">Idempotence</p>
-            <p class="mt-2 text-slate-600 dark:text-slate-300">
-              Pipelines and notebooks were designed for safe re-runs (no duplicates) using batch IDs, merge logic, and watermarking.
-            </p>
-          </div>
-          <div class="rounded-2xl border p-6 bg-white/60 dark:bg-slate-800/60">
-            <p class="font-medium">Schema drift protection</p>
-            <p class="mt-2 text-slate-600 dark:text-slate-300">
-              Added upstream schema validation so unexpected legacy changes wouldn’t corrupt Fabric tables or break downstream models.
-            </p>
-          </div>
-          <div class="rounded-2xl border p-6 bg-white/60 dark:bg-slate-800/60">
-            <p class="font-medium">Reconciliation “circuit breaker”</p>
-            <p class="mt-2 text-slate-600 dark:text-slate-300">
-              Automated checks compare legacy vs Fabric. If revenue divergence exceeds a strict threshold, publication is blocked and alerts
-              are triggered before reports reach finance stakeholders.
-            </p>
-          </div>
-          <div class="rounded-2xl border p-6 bg-white/60 dark:bg-slate-800/60">
-            <p class="font-medium">Operability</p>
-            <p class="mt-2 text-slate-600 dark:text-slate-300">
-              Centralized run logs, row counts, durations, and failure reasons to support on-call response and troubleshooting.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- ROI -->
-      <section class="mt-10">
-        <h2 class="text-2xl font-semibold">Impact (ROI)</h2>
-        <div class="mt-4 rounded-2xl border p-6 bg-white/60 dark:bg-slate-800/60">
-          <ul class="grid sm:grid-cols-2 gap-3 text-sm">
-            <li>⏱ <strong>3 weeks</strong> to first production dashboard (vs <strong>8 months</strong> estimate)</li>
-            <li>✅ <strong>0 downtime</strong> during cutover phases</li>
-            <li>⚡ <strong>-65%</strong> Power BI load time (Direct Lake)</li>
-            <li>💰 <strong>~35–40%</strong> cost reduction from reduced movement + optimized compute</li>
-          </ul>
-          <p class="mt-3 text-xs text-slate-500 dark:text-slate-400">
-            Replace any number with the most accurate values you can defend in interviews.
-          </p>
-        </div>
-      </section>
-
-      <!-- Post-mortem -->
-      <section class="mt-10">
-        <h2 class="text-2xl font-semibold">Post-mortem</h2>
-        <div class="mt-4 rounded-2xl border p-6 bg-white/60 dark:bg-slate-800/60 text-sm">
-          <p class="text-slate-600 dark:text-slate-300">
-            The hardest production issue was <strong>schema drift</strong> in the legacy layer. A breaking change nearly impacted the
-            Fabric Lakehouse. I implemented upstream schema validation and stricter gates before exposure through shortcuts—preventing
-            future incidents and stabilizing the migration path.
-          </p>
-        </div>
-      </section>
-
-      <!-- Footer CTA -->
-      <section class="mt-12">
-        <div class="rounded-2xl border p-6 bg-white/60 dark:bg-slate-800/60 flex flex-col sm:flex-row gap-3 items-start sm:items-center justify-between">
-          <div>
-            <p class="font-semibold">Want the full technical details?</p>
-            <p class="text-sm text-slate-600 dark:text-slate-300">
-              I can share deeper implementation notes (patterns, checks, and operational runbooks) on request.
-            </p>
-          </div>
-          <a
-            href="mailto:salma.houidi.ing@gmail.com"
-            class="inline-flex items-center justify-center rounded-full bg-blue-600 text-white text-xs font-medium px-4 py-2 hover:bg-blue-700"
-          >
-            Email me
-          </a>
-        </div>
-      </section>
-
-      <div class="mt-10 text-center">
-        <a href="index.html#projects" class="text-sm underline hover:text-blue-600">Back to projects ↑</a>
-      </div>
-    </main>
-
-    <footer class="py-8 text-center text-xs text-slate-500">
-      © <span id="year2"></span> Salma Houidi — Data Engineer.
-    </footer>
-
-    <script>
-      // Theme (same behavior as home)
-      const btn2 = document.getElementById("themeToggle2");
-      const preferDark2 =
-        localStorage.getItem("theme") === "dark" ||
-        (!localStorage.getItem("theme") && window.matchMedia("(prefers-color-scheme: dark)").matches);
-
-      if (preferDark2) document.documentElement.classList.add("dark");
-
-      btn2?.addEventListener("click", () => {
-        document.documentElement.classList.toggle("dark");
-        localStorage.setItem("theme", document.documentElement.classList.contains("dark") ? "dark" : "light");
-      });
-
-      document.getElementById("year2").textContent = new Date().getFullYear();
     </script>
   </body>
 </html>
