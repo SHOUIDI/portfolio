@@ -4,108 +4,285 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Salma Houidi — Data Engineer Portfolio</title>
-    <meta name="description" content="Salma Houidi — Data Engineer with 5 years of experience. Specializing in Azure, Databricks, Power BI, CI/CD, SQL, and PySpark." />
+    <meta
+      name="description"
+      content="Salma Houidi — Data Engineer with 5 years of experience. Specializing in Microsoft Fabric, Azure, Databricks, Power BI, CI/CD, SQL, and PySpark."
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-      tailwind.config = { darkMode: 'class' }
+      tailwind.config = { darkMode: "class" };
     </script>
   </head>
+
   <body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100">
-    <header class="fixed top-0 inset-x-0 z-50 bg-white/70 dark:bg-slate-800/70 backdrop-blur border-b border-slate-200/60 dark:border-slate-700/60">
+    <!-- Header -->
+    <header
+      class="fixed top-0 inset-x-0 z-50 bg-white/70 dark:bg-slate-800/70 backdrop-blur border-b border-slate-200/60 dark:border-slate-700/60"
+    >
       <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
         <a href="#top" class="font-semibold tracking-tight">Salma Houidi</a>
+
         <nav class="hidden sm:flex gap-4 text-sm">
           <a class="hover:text-blue-600" href="#about">About</a>
           <a class="hover:text-blue-600" href="#projects">Projects</a>
           <a class="hover:text-blue-600" href="#contact">Contact</a>
         </nav>
+
         <div class="flex items-center gap-2">
-          <button id="themeToggle" class="rounded-full border px-3 py-1 text-xs hover:bg-slate-100 dark:hover:bg-slate-800">🌙/☀️</button>
-          <a href="#contact" class="hidden sm:inline-flex items-center gap-2 rounded-full bg-blue-600 text-white text-xs font-medium px-3 py-1.5 hover:bg-blue-700">Contact Me</a>
+          <button
+            id="themeToggle"
+            class="rounded-full border px-3 py-1 text-xs hover:bg-slate-100 dark:hover:bg-slate-800"
+            aria-label="Toggle theme"
+          >
+            🌙/☀️
+          </button>
+          <a
+            href="#contact"
+            class="hidden sm:inline-flex items-center gap-2 rounded-full bg-blue-600 text-white text-xs font-medium px-3 py-1.5 hover:bg-blue-700"
+          >
+            Contact Me
+          </a>
         </div>
       </div>
     </header>
 
     <main id="top" class="max-w-5xl mx-auto px-4 pt-28 pb-24">
+      <!-- Hero -->
       <section class="grid md:grid-cols-[1.2fr,1fr] gap-8 items-center">
         <div>
-          <h1 class="text-3xl md:text-4xl font-bold leading-tight">Salma Houidi — <span class="text-blue-600">Data Engineer</span></h1>
-          <p class="mt-3 text-slate-600 dark:text-slate-300">I am a Data Engineer with <strong>5 years of experience</strong> designing and building modern data solutions. My expertise lies in <strong>Azure</strong>, <strong>Databricks</strong>, <strong>Power BI</strong>, <strong>CI/CD</strong>, <strong>SQL</strong>, and <strong>PySpark</strong>. I transform data into actionable insights through automation and scalable cloud architectures.</p>
+          <h1 class="text-3xl md:text-4xl font-bold leading-tight">
+            Salma Houidi — <span class="text-blue-600">Data Engineer</span>
+          </h1>
+
+          <p class="mt-3 text-slate-600 dark:text-slate-300">
+            Data Engineer with <strong>5 years</strong> building reliable lakehouse platforms on Azure.
+            I specialize in <strong>zero-downtime migrations</strong>, <strong>incremental data modeling</strong>, and
+            <strong>finance-grade reconciliation</strong> across Synapse/Databricks and Microsoft Fabric.
+          </p>
+
           <div class="mt-5 flex flex-wrap gap-2">
+            <span class="px-2 py-1 text-xs rounded-full border">Microsoft Fabric</span>
             <span class="px-2 py-1 text-xs rounded-full border">Azure</span>
             <span class="px-2 py-1 text-xs rounded-full border">Databricks</span>
+            <span class="px-2 py-1 text-xs rounded-full border">OneLake</span>
             <span class="px-2 py-1 text-xs rounded-full border">Power BI</span>
             <span class="px-2 py-1 text-xs rounded-full border">CI/CD</span>
             <span class="px-2 py-1 text-xs rounded-full border">SQL</span>
             <span class="px-2 py-1 text-xs rounded-full border">PySpark</span>
+            <span class="px-2 py-1 text-xs rounded-full border">Data Quality</span>
+          </div>
+
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a
+              href="#p1"
+              class="inline-flex items-center justify-center rounded-full bg-blue-600 text-white text-xs font-medium px-4 py-2 hover:bg-blue-700"
+            >
+              View flagship project →
+            </a>
+            <a
+              href="#projects"
+              class="inline-flex items-center justify-center rounded-full border text-xs font-medium px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800"
+            >
+              Browse all projects
+            </a>
           </div>
         </div>
+
         <div class="relative">
-          <img alt="Photo of Salma Houidi" src="https://avatars.githubusercontent.com/u/9919?s=200&v=4" class="w-40 h-40 md:w-48 md:h-48 rounded-2xl object-cover mx-auto ring-4 ring-blue-100 dark:ring-blue-900" />
+          <!-- Replace with your real photo: put profile.jpg in your repo root -->
+          <img
+            alt="Photo of Salma Houidi"
+            src="./profile.jpg"
+            onerror="this.onerror=null;this.src='https://placehold.co/256x256/png?text=Salma+Houidi';"
+            class="w-40 h-40 md:w-48 md:h-48 rounded-2xl object-cover mx-auto ring-4 ring-blue-100 dark:ring-blue-900"
+          />
+          <p class="mt-3 text-center text-xs text-slate-500 dark:text-slate-400">
+            Tip: add <code>profile.jpg</code> to your repo for a polished look.
+          </p>
         </div>
       </section>
 
+      <!-- About -->
       <section id="about" class="mt-16">
         <h2 class="text-2xl font-semibold">About</h2>
         <div class="prose prose-slate dark:prose-invert max-w-none mt-3">
-          <p>I am <strong>Salma Houidi</strong>, a <strong>Data Engineer</strong> with <strong>5 years of experience</strong> in building data pipelines, cloud architectures, and BI solutions. I specialize in <strong>Azure Databricks</strong>, <strong>Power BI</strong>, <strong>PySpark</strong>, <strong>CI/CD automation</strong>, and <strong>SQL optimization</strong>.</p>
-          <p>My focus is to create reliable, automated, and scalable data platforms that empower organizations to make data-driven decisions.</p>
+          <p>
+            I’m <strong>Salma Houidi</strong>, a <strong>Data Engineer</strong> with <strong>5 years of experience</strong>
+            building data pipelines, lakehouse architectures, and BI solutions.
+          </p>
+          <p>
+            I focus on delivering <strong>production-grade</strong> platforms: observable pipelines, reliable data quality,
+            incremental processing, and business-ready semantic layers—so teams can trust the numbers.
+          </p>
         </div>
       </section>
 
+      <!-- Quick Navigation -->
       <section class="mt-12">
         <h3 class="text-lg font-semibold">Quick Navigation</h3>
         <ul class="mt-3 grid sm:grid-cols-2 md:grid-cols-3 gap-2 text-sm">
-          <li><a class="block rounded-lg border p-3 hover:border-blue-600" href="#p1">⚙️ Azure Databricks Pipeline</a></li>
-          <li><a class="block rounded-lg border p-3 hover:border-blue-600" href="#p2">🧱 PySpark ETL</a></li>
-          <li><a class="block rounded-lg border p-3 hover:border-blue-600" href="#p3">📊 Power BI Dashboards</a></li>
+          <li>
+            <a class="block rounded-lg border p-3 hover:border-blue-600" href="#p1"
+              >🏆 Zero-Downtime Migration (Synapse/Databricks → Fabric)</a
+            >
+          </li>
+          <li>
+            <a class="block rounded-lg border p-3 hover:border-blue-600" href="#p2">🧱 Scalable PySpark ETL</a>
+          </li>
+          <li>
+            <a class="block rounded-lg border p-3 hover:border-blue-600" href="#p3">📊 Power BI Dashboards</a>
+          </li>
         </ul>
       </section>
 
+      <!-- Projects -->
       <section id="projects" class="mt-12">
-        <h2 class="text-2xl font-semibold">Projects</h2>
+        <div class="flex items-end justify-between gap-4">
+          <h2 class="text-2xl font-semibold">Projects</h2>
+          <p class="text-sm text-slate-500 dark:text-slate-400">
+            Flagship first. Depth available via case study.
+          </p>
+        </div>
 
-        <article id="p1" class="mt-6 rounded-2xl border p-6 bg-white/60 dark:bg-slate-800/60">
-          <h3 class="text-xl font-semibold">⚙️ Azure Databricks End-to-End Pipeline</h3>
-          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Designed and deployed a modern medallion architecture using Azure Data Factory, Databricks, Delta Live Tables, and Power BI. Automated ingestion, transformation, and reporting.</p>
+        <!-- Project 1 (Flagship) -->
+        <article
+          id="p1"
+          class="mt-6 rounded-2xl border p-6 bg-white/60 dark:bg-slate-800/60 ring-1 ring-blue-500/30"
+        >
+          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
+            <div>
+              <p
+                class="inline-flex items-center gap-2 text-xs font-medium px-3 py-1 rounded-full bg-blue-600 text-white"
+              >
+                Featured • Flagship System
+              </p>
+
+              <h3 class="mt-3 text-xl font-semibold">
+                🏆 Zero-Downtime Migration (Synapse/Databricks → Microsoft Fabric)
+              </h3>
+
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+                Led a <strong>hybrid lakehouse</strong> migration strategy to deliver Fabric value in weeks without interrupting
+                mission-critical retail sales reporting. Implemented <strong>Zero-Copy Bronze via OneLake Shortcuts</strong>,
+                <strong>MLV-based Silver normalization</strong>, and <strong>incremental Gold modeling</strong> optimized for
+                <strong>Power BI Direct Lake</strong>.
+              </p>
+            </div>
+
+            <div class="flex flex-wrap gap-2">
+              <!-- Create this file next: fabric-zero-downtime.html -->
+              <a
+                href="fabric-zero-downtime.html"
+                class="inline-flex items-center justify-center rounded-full bg-blue-600 text-white text-xs font-medium px-3 py-1.5 hover:bg-blue-700"
+              >
+                Read case study →
+              </a>
+              <a
+                href="#contact"
+                class="inline-flex items-center justify-center rounded-full border text-xs font-medium px-3 py-1.5 hover:bg-slate-50 dark:hover:bg-slate-800"
+              >
+                Contact
+              </a>
+            </div>
+          </div>
+
           <ul class="mt-3 flex flex-wrap gap-2 text-xs">
-            <li class="px-2 py-1 rounded-full border">Azure</li>
-            <li class="px-2 py-1 rounded-full border">Databricks</li>
-            <li class="px-2 py-1 rounded-full border">CI/CD</li>
-            <li class="px-2 py-1 rounded-full border">Power BI</li>
+            <li class="px-2 py-1 rounded-full border">Microsoft Fabric</li>
+            <li class="px-2 py-1 rounded-full border">OneLake Shortcuts</li>
+            <li class="px-2 py-1 rounded-full border">MLV</li>
+            <li class="px-2 py-1 rounded-full border">Medallion</li>
+            <li class="px-2 py-1 rounded-full border">Incremental Notebooks</li>
+            <li class="px-2 py-1 rounded-full border">Power BI Direct Lake</li>
+            <li class="px-2 py-1 rounded-full border">Reconciliation</li>
+            <li class="px-2 py-1 rounded-full border">Idempotence</li>
           </ul>
-          <p class="mt-3 text-sm">Impact: Automated daily ingestion and improved report delivery time by 70%.</p>
+
+          <div class="mt-4 grid sm:grid-cols-2 gap-3 text-sm">
+            <div class="rounded-xl border p-4 bg-white/50 dark:bg-slate-900/20">
+              <p class="font-medium">Key move</p>
+              <p class="mt-1 text-slate-600 dark:text-slate-300">
+                Replaced the 8-month “big bang” approach with a <strong>coexistence-active architecture</strong> to minimize risk and
+                accelerate time-to-value.
+              </p>
+            </div>
+            <div class="rounded-xl border p-4 bg-white/50 dark:bg-slate-900/20">
+              <p class="font-medium">CTO guardrails</p>
+              <p class="mt-1 text-slate-600 dark:text-slate-300">
+                Built a <strong>finance-grade reconciliation circuit breaker</strong> + <strong>idempotent incremental loads</strong> to prevent drift.
+              </p>
+            </div>
+          </div>
+
+          <p class="mt-4 text-sm">
+            <strong>Impact:</strong> first production dashboard in <strong>3 weeks</strong> (vs <strong>8 months</strong>),
+            <strong>0 downtime</strong>, <strong>-65%</strong> Power BI load time, <strong>~35–40%</strong> cost reduction.
+          </p>
+
+          <p class="mt-3 text-xs text-slate-500 dark:text-slate-400">
+            Note: adjust metrics to what you can confidently defend in interviews.
+          </p>
         </article>
 
+        <!-- Project 2 -->
         <article id="p2" class="mt-6 rounded-2xl border p-6 bg-white/60 dark:bg-slate-800/60">
           <h3 class="text-xl font-semibold">🧱 Scalable PySpark ETL</h3>
-          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Developed an optimized ETL pipeline in PySpark for financial data using Delta Lake, improving performance and cost-efficiency.</p>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+            Developed an optimized ETL pipeline in PySpark for financial datasets using Delta Lake patterns (partitioning, incremental loads,
+            and reliability checks) to improve performance and cost-efficiency.
+          </p>
           <ul class="mt-3 flex flex-wrap gap-2 text-xs">
             <li class="px-2 py-1 rounded-full border">PySpark</li>
             <li class="px-2 py-1 rounded-full border">Delta Lake</li>
-            <li class="px-2 py-1 rounded-full border">Azure Blob</li>
+            <li class="px-2 py-1 rounded-full border">Azure Storage</li>
+            <li class="px-2 py-1 rounded-full border">Data Quality</li>
           </ul>
-          <p class="mt-3 text-sm">Impact: Reduced processing time by 40% and improved data reliability.</p>
+          <p class="mt-3 text-sm"><strong>Impact:</strong> reduced processing time by 40% and improved data reliability.</p>
         </article>
 
+        <!-- Project 3 -->
         <article id="p3" class="mt-6 rounded-2xl border p-6 bg-white/60 dark:bg-slate-800/60">
           <h3 class="text-xl font-semibold">📊 Power BI Dashboards</h3>
-          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Created dynamic dashboards connected to Databricks and Azure SQL to monitor business KPIs and operational metrics.</p>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+            Built dashboards connected to Databricks and Azure SQL to monitor business KPIs and operational metrics, enabling self-service
+            analytics and reducing manual reporting.
+          </p>
           <ul class="mt-3 flex flex-wrap gap-2 text-xs">
             <li class="px-2 py-1 rounded-full border">Power BI</li>
             <li class="px-2 py-1 rounded-full border">SQL</li>
             <li class="px-2 py-1 rounded-full border">Azure</li>
+            <li class="px-2 py-1 rounded-full border">Semantic Model</li>
           </ul>
-          <p class="mt-3 text-sm">Impact: Enabled self-service analytics and reduced manual reporting by 60%.</p>
+          <p class="mt-3 text-sm"><strong>Impact:</strong> enabled self-service analytics and reduced manual reporting by 60%.</p>
         </article>
       </section>
 
+      <!-- Contact -->
       <section id="contact" class="mt-16">
         <h2 class="text-2xl font-semibold">Contact</h2>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
+          Want to discuss a role or a project? Reach out.
+        </p>
+
         <div class="mt-3 flex flex-wrap items-center gap-3 text-sm">
-          <a class="inline-flex items-center gap-2 rounded-md border px-3 py-1.5 hover:bg-slate-50 dark:hover:bg-slate-800" href="https://github.com/salmahouidi" target="_blank">GitHub</a>
-          <a class="inline-flex items-center gap-2 rounded-md border px-3 py-1.5 hover:bg-slate-50 dark:hover:bg-slate-800" href="https://www.linkedin.com/in/houidi-salma/" target="_blank">LinkedIn</a>
-          <a class="inline-flex items-center gap-2 rounded-md border px-3 py-1.5 hover:bg-slate-50 dark:hover:bg-slate-800" href="mailto:salma.houidi.ing@gmail.com">Email</a>
+          <a
+            class="inline-flex items-center gap-2 rounded-md border px-3 py-1.5 hover:bg-slate-50 dark:hover:bg-slate-800"
+            href="https://github.com/salmahouidi"
+            target="_blank"
+            rel="noreferrer"
+            >GitHub</a
+          >
+          <a
+            class="inline-flex items-center gap-2 rounded-md border px-3 py-1.5 hover:bg-slate-50 dark:hover:bg-slate-800"
+            href="https://www.linkedin.com/in/houidi-salma/"
+            target="_blank"
+            rel="noreferrer"
+            >LinkedIn</a
+          >
+          <a
+            class="inline-flex items-center gap-2 rounded-md border px-3 py-1.5 hover:bg-slate-50 dark:hover:bg-slate-800"
+            href="mailto:salma.houidi.ing@gmail.com"
+            >Email</a
+          >
         </div>
       </section>
 
@@ -119,15 +296,25 @@
     </footer>
 
     <script>
-      const btn = document.getElementById('themeToggle');
-      if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark');
+      // Theme
+      const btn = document.getElementById("themeToggle");
+      if (
+        localStorage.getItem("theme") === "dark" ||
+        (!localStorage.getItem("theme") &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
       }
-      btn?.addEventListener('click', () => {
-        document.documentElement.classList.toggle('dark');
-        localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+      btn?.addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
+        localStorage.setItem(
+          "theme",
+          document.documentElement.classList.contains("dark") ? "dark" : "light"
+        );
       });
-      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Year
+      document.getElementById("year").textContent = new Date().getFullYear();
     </script>
   </body>
 </html>
